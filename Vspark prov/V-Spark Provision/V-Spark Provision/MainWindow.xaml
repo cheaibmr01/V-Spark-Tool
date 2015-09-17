@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ig="http://schemas.infragistics.com/xaml" xmlns:Custom="http://infragistics.com/Windows" x:Name="V_Spark" x:Class="V_Spark_Provision.MainWindow"
+        Title="V-Spark Tool" Height="350" Width="538" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Custom:XamTabControl HorizontalAlignment="Left" Height="305" Margin="10,10,0,0" VerticalAlignment="Top" Width="505">
+        <Custom:TabItemEx x:Name="Create" Header="Create">
+            <Grid Margin="10,5,-4,-8">
+                <TextBox x:Name="NewFolderName" HorizontalAlignment="Left" Height="30" Margin="178,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="196" TextChanged="NewFolderName_TextChanged"/>
+                <Label Content="New Folder Name:" HorizontalAlignment="Left" Margin="26,73,0,0" VerticalAlignment="Top" Height="30" Width="147" FontWeight="Bold" FontSize="14"/>
+                <Label x:Name="TestLogic" Content="Logical" HorizontalAlignment="Left" Margin="167,158,-26,0" VerticalAlignment="Top" Height="30" Width="348" FontWeight="Bold" FontSize="14"/>
+                <Label x:Name="TestPhysical" Content="Physical" HorizontalAlignment="Left" Margin="167,115,0,0" VerticalAlignment="Top" Height="30" Width="288" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="Connect" Content="Create Folder And Save Location" HorizontalAlignment="Left" Margin="26,209,0,0" VerticalAlignment="Top" Width="298" Click="Connect_Click"/>
+                <Label Content="Physical Name" HorizontalAlignment="Left" Margin="46,119,0,0" VerticalAlignment="Top" Width="102"/>
+                <Label Content="Logical Name" HorizontalAlignment="Left" Margin="46,158,0,0" VerticalAlignment="Top" Width="102"/>
+            </Grid>
+        </Custom:TabItemEx>
+        <Custom:TabItemEx Header="Copy">
+            <Grid Margin="0,5,0,-5">
+                <TextBox x:Name="txtSourceDest" HorizontalAlignment="Left" Height="22" Margin="236,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227"/>
+                <TextBox x:Name="txtFinalDest" HorizontalAlignment="Left" Height="22" Margin="236,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227"/>
+                <Button x:Name="SelectSource" Content="Select Source Folder" HorizontalAlignment="Left" Margin="21,54,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.213,0.455" Click="SelectSource_Click"/>
+                <Button x:Name="SelectDestn" Content="Select Destination Folder" HorizontalAlignment="Left" Margin="21,99,0,0" VerticalAlignment="Top" Width="178" Click="SelectDestn_Click"/>
+                <Button x:Name="CopySourceToDest" Content="Copy Files" HorizontalAlignment="Left" Margin="201,142,0,0" VerticalAlignment="Top" Width="75" Click="CopySourceToDest_Click"/>
+                <Button x:Name="View_Desination_Files" Content="View Destination Files" HorizontalAlignment="Left" Margin="281,142,0,0" VerticalAlignment="Top" Width="151" Click="View_Desination_Files_Click"/>
+                <Button x:Name="View_Source_Files" Content="View Source Files" HorizontalAlignment="Left" Margin="21,142,0,0" VerticalAlignment="Top" Width="173" Click="View_Source_Files_Click" RenderTransformOrigin="-1.277,0.273"/>
+            </Grid>
+        </Custom:TabItemEx>
+        <Custom:TabItemEx Header="Count and View">
+            <Grid>
+                <ListBox x:Name="SourceFileList" HorizontalAlignment="Left" Height="173" Margin="10,59,0,0" VerticalAlignment="Top" Width="475"/>
+                <Label x:Name="FilesCountLabel" Content="Label" HorizontalAlignment="Left" Margin="50,232,0,0" VerticalAlignment="Top" Width="389" BorderThickness="2" Opacity="0.5"/>
+                <Label x:Name="TitleBar" Content="Label" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="389"/>
+            </Grid>
+        </Custom:TabItemEx>
+    </Custom:XamTabControl>
+</Window>
